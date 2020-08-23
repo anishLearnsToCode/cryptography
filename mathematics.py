@@ -18,6 +18,7 @@ def diophantine_sol_exists(a, b, c):
     hcf = gcd(a, b)
     return c % hcf == 0
 
+
 # returns solution of diophantine equation in form (x, y) if exists
 # returns the particular solution otherwise returns nothing
 def diophantine(a, b, c):
