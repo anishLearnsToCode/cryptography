@@ -1,4 +1,4 @@
-from mathematics import gcd, extended_gcd, diophantine, diophantine_general
+from src.mathematics import diophantine, diophantine_general
 
 # print(gcd(25, 60))
 # hcf, s, t = extended_gcd(161, 28)
