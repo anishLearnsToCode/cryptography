@@ -31,8 +31,8 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
     1. [One Time Pad Cipher](ciphers/OneTimePadCipher.py)
 1. Transposition Ciphers
     1. Keyless Transposition Ciphers 
-        1. Row Transposition Cipher
-        2. [Column Transposition Cipher](ciphers/ColumnTranspositionCipher.py)
-        3. [Rail Fence Transposition Cipher](ciphers/RailFenceCipher.py)
+        1. [Column Transposition Cipher](ciphers/ColumnTranspositionCipher.py)
+        1. [Row Transposition Cipher](ciphers/RowTranspositionCipher.py)
+        1. [Rail Fence Transposition Cipher](ciphers/RailFenceCipher.py)
     1. Key Based Transposition Ciphers
     
