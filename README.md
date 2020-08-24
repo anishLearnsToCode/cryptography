@@ -24,6 +24,6 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
     1. [Multiplicative Cipher](ciphers/MultiplicativeCipher.py)
     1. [Affine Cipher](ciphers/AffineCipher.py)
 1. Polyalphabetic Ciphers
-    1. Autokey Cipher
+    1. [Autokey Cipher](ciphers/AutoKeyCipher.py)
     1. [Playfair Cipher](ciphers/PlayfairCipher.py)
    
