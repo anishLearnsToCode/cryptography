@@ -1,22 +1,20 @@
-from src.mathematics import diophantine, diophantine_general, PlayFairCipher
+from mathematics import modMatInv
+from ciphers.HillCipher import HillCipher
 
-# print(gcd(25, 60))
-# hcf, s, t = extended_gcd(161, 28)
-# print(s * 161 + t * 28, hcf)
-#
-# hcf, s, t = extended_gcd(10, 2)
-# print(s * 10 + t * 2, hcf)
-#
-# hcf, s, t = extended_gcd(0, 45)
-# print(s * 0 + t * 45, hcf)
+hill_cipher = HillCipher([
+    [9, 7, 11, 13],
+    [4, 7, 5, 6],
+    [2, 21, 14, 9],
+    [3, 23, 21, 8]
+])
 
-playfair_cipher = PlayFairCipher(
-    [['l', 'g', 'd', 'b', 'a'],
-     ['q', 'm', 'h', 'e', 'c'],
-     ['u', 'r', 'n', 'i', 'f'],
-     ['x', 'v', 's', 'o', 'k'],
-     ['z', 'y', 'w', 't', 'p']]
-)
-
-ciphertext = playfair_cipher.encrypt('hello')
+ciphertext = hill_cipher.encrypt('codeisready')
 print(ciphertext)
+print(hill_cipher.decrypt(ciphertext))
+
+# print(modMatInv([
+#     [9, 7, 11, 13],
+#     [4, 7, 5, 6],
+#     [2, 21, 14, 9],
+#     [3, 23, 21, 8]
+# ], 26))
