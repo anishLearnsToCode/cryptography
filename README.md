@@ -21,7 +21,7 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 ## 🔑 [Traditional Symmetric Key Ciphers](notebooks/3-symmetric-key-ciphers.ipynb)
 1. Monoalphabetic Ciphers
     1. [Caesar Shift Cipher](ciphers/CaesarShiftCipher.py)
-    1. Multiplicative Cipher
+    1. [Multiplicative Cipher](ciphers/MultiplicativeCipher.py)
     1. Affine Cipher
 1. Polyalphabetic Ciphers
     1. Autokey Cipher
