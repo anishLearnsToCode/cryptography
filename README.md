@@ -26,4 +26,6 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 1. Polyalphabetic Ciphers
     1. [Autokey Cipher](ciphers/AutoKeyCipher.py)
     1. [Playfair Cipher](ciphers/PlayfairCipher.py)
-   
+    1. [Vignere Cipher](ciphers/VignereCipher.py)
+    1. [Hill Cipher](ciphers/HillCipher.py)
+    
