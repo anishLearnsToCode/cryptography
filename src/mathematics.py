@@ -35,3 +35,31 @@ def diophantine_general(a, b, c, iters=10):
         hcf = gcd(a, b)
         for i in range(iters):
             yield x + i * (b // hcf), y - i * (a // hcf)
+
+
+def additive_inverse(a, n):
+    return (n - a) % n
+
+
+def multiplicative_inverse_exists(a, n):
+    return gcd(a, n) == 1
+
+
+def multiplicative_inverse(b, n):
+    if multiplicative_inverse_exists(b, n):
+        return (extended_gcd(n, b)[2] + n) % n
+
+
+def sol_single_var_le(a, b, n, c=0):
+    if c != 0:
+        b = (b - c) % n
+
+    hcf = gcd(a, n)
+    sols = []
+    if b % hcf == 0:
+        a, b, n = a // hcf, b // hcf, n // hcf
+        x_0 = (b * multiplicative_inverse(a, n)) % n
+        for k in range(hcf):
+            sols.append(x_0 + k * n)
+    return sols
+
