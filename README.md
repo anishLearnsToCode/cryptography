@@ -10,7 +10,7 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 - [Mathematics of Cryptography](#mathematics-of-cryptography)
 - [Traditional Symmetric-Key Ciphers](#traditional-symmetric-key-ciphers)
 
-## [🧮 Mathematics of Cryptography](notebook/math-of-cryptography/mathematics-of-cryptography.ipynb)
+## 🧮 [Mathematics of Cryptography](notebooks/2-mathematics-of-cryptography.ipynb)
 1. Euclid's Algorithm
 1. Extended Euclid's Algorithm
 1. Diophantine's Equation
@@ -18,7 +18,7 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 1. Multiplicative Inverse
 1. Solutions to Single Variable Linear Equations
 
-## Traditional Symmetric Key Ciphers
+## 🔑 [Traditional Symmetric Key Ciphers](notebooks/3-symmetric-key-ciphers.ipynb)
 1. Monoalphabetic Ciphers
     1. Caesar Shift Cipher
     1. Multiplicative Cipher
