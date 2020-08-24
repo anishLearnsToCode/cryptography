@@ -1,1 +1,1 @@
-from mathematics.modular_matrix_inverse import modMatInv
+from mathematics.arithmetic import *
