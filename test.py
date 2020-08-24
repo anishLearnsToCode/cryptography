@@ -1,8 +1,7 @@
-from ciphers import OneTimePadCipher
+from ciphers import ColumnTranspositionCipher
 
-cipher = OneTimePadCipher()
-ciphertext = cipher.encrypt('helloworld')
+cipher = ColumnTranspositionCipher(2)
+ciphertext = cipher.encrypt('meetmeatthepark')
 print(ciphertext)
+
 print(cipher.decrypt(ciphertext))
-print(cipher.encrypt('zombie'))
-print(cipher.decrypt('lolz'))

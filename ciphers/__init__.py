@@ -6,3 +6,5 @@ from ciphers.MultiplicativeCipher import MultiplicativeCipher
 from ciphers.AffineCipher import AffineCipher
 from ciphers.AutoKeyCipher import AutoKeyCipher
 from ciphers.OneTimePadCipher import OneTimePadCipher
+from ciphers.ColumnTranspositionCipher import ColumnTranspositionCipher
+from ciphers.RailFenceCipher import RailFenceCipher
