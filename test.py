@@ -1,6 +1,8 @@
-from ciphers import MultiplicativeCipher
+from ciphers import OneTimePadCipher
 
-caesar_cipher = MultiplicativeCipher(7)
-ciphertext = caesar_cipher.encrypt('helloworld')
+cipher = OneTimePadCipher()
+ciphertext = cipher.encrypt('helloworld')
 print(ciphertext)
-print(caesar_cipher.decrypt(ciphertext))
+print(cipher.decrypt(ciphertext))
+print(cipher.encrypt('zombie'))
+print(cipher.decrypt('lolz'))

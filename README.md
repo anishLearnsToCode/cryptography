@@ -28,4 +28,5 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
     1. [Playfair Cipher](ciphers/PlayfairCipher.py)
     1. [Vignere Cipher](ciphers/VignereCipher.py)
     1. [Hill Cipher](ciphers/HillCipher.py)
+    1. [One Time Pad Cipher](ciphers/OneTimePadCipher.py)
     
