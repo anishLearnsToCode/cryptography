@@ -1,4 +1,4 @@
-from src.mathematics import diophantine, diophantine_general
+from src.mathematics import diophantine, diophantine_general, PlayFairCipher
 
 # print(gcd(25, 60))
 # hcf, s, t = extended_gcd(161, 28)
@@ -10,7 +10,13 @@ from src.mathematics import diophantine, diophantine_general
 # hcf, s, t = extended_gcd(0, 45)
 # print(s * 0 + t * 45, hcf)
 
-print(diophantine(21, 14, 35))
+playfair_cipher = PlayFairCipher(
+    [['l', 'g', 'd', 'b', 'a'],
+     ['q', 'm', 'h', 'e', 'c'],
+     ['u', 'r', 'n', 'i', 'f'],
+     ['x', 'v', 's', 'o', 'k'],
+     ['z', 'y', 'w', 't', 'p']]
+)
 
-for x, y in diophantine_general(20, 5, 100):
-    print(x, y)
+ciphertext = playfair_cipher.encrypt('hello')
+print(ciphertext)

@@ -19,3 +19,11 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 1. Solutions to Single Variable Linear Equations
 
 ## Traditional Symmetric Key Ciphers
+1. Monoalphabetic Ciphers
+    1. Caesar Shift Cipher
+    1. Multiplicative Cipher
+    1. Affine Cipher
+1. Polyalphabetic Ciphers
+    1. Autokey Cipher
+    1. Playfair Cipher
+   
