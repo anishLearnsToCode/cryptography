@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 from numpy import linalg
 
 
@@ -70,16 +70,24 @@ def sol_single_var_le(a, b, n, c=0):
 
 def modMatInv(A, p):  # Finds the inverse of matrix A mod p
     n = len(A)
-    adj = numpy.zeros(shape=(n, n))
+    adj = np.zeros(shape=(n, n))
     for i in range(0, n):
         for j in range(0, n):
             adj[i][j] = ((-1) ** (i + j) * int(round(linalg.det(minor(A, j, i))))) % p
-    return (multiplicative_inverse(int(round(linalg.det(A))), p) * adj) % p
+    return (modInv(int(round(linalg.det(A))), p) * adj) % p
+
+
+def modInv(a, p):  # Finds the inverse of a mod p, if it exists
+    for i in range(1, p):
+        if (i * a) % p == 1:
+            return i
+    raise ValueError(str(a) + " has no inverse mod " + str(p))
+
 
 
 def minor(A, i, j):  # Return matrix A with the ith row and jth column deleted
-    A = numpy.array(A)
-    sub_matrix = numpy.zeros(shape=(len(A) - 1, len(A) - 1))
+    A = np.array(A)
+    sub_matrix = np.zeros(shape=(len(A) - 1, len(A) - 1))
     p = 0
     for s in range(0, len(sub_matrix)):
         if p == i:
