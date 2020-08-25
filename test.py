@@ -1,7 +1,7 @@
-from ciphers import ColumnTranspositionCipher
+from ciphers import ColumnarTranspositionCipher
 
-cipher = ColumnTranspositionCipher(2)
-ciphertext = cipher.encrypt('meetmeatthepark')
+key_transposition_cipher = ColumnarTranspositionCipher(key=[2, 0, 3, 4, 1])
+ciphertext = key_transposition_cipher.encrypt('enemyattackstonight')
 print(ciphertext)
 
-print(cipher.decrypt(ciphertext))
+print(key_transposition_cipher.decrypt(ciphertext))

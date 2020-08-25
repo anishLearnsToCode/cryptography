@@ -35,4 +35,6 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
         1. [Row Transposition Cipher](ciphers/RowTranspositionCipher.py)
         1. [Rail Fence Transposition Cipher](ciphers/RailFenceCipher.py)
     1. Key Based Transposition Ciphers
+        1. [Keyed Transposition Cipher](ciphers/KeyedTranspositionCipher.py)
+        1. [Columnar Transposition Cipher](ciphers/ColumnarTranspositionCipher.py)
     

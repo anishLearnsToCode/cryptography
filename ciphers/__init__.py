@@ -9,3 +9,5 @@ from ciphers.OneTimePadCipher import OneTimePadCipher
 from ciphers.ColumnTranspositionCipher import ColumnTranspositionCipher
 from ciphers.RailFenceCipher import RailFenceCipher
 from ciphers.RowTranspositionCipher import RowTranspositionCipher
+from ciphers.KeyedTranspositionCipher import KeyedTranspositionCipher
+from ciphers.ColumnarTranspositionCipher import ColumnarTranspositionCipher
