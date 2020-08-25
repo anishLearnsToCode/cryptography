@@ -1,7 +1,21 @@
-from ciphers import ColumnarTranspositionCipher
+from mathematics import Polynomial
 
-key_transposition_cipher = ColumnarTranspositionCipher(key=[2, 0, 3, 4, 1])
-ciphertext = key_transposition_cipher.encrypt('enemyattackstonight')
-print(ciphertext)
+p1 = Polynomial({12: 1, 7: 1, 2: 1})
+p2 = Polynomial({8: 1, 4: 1, 3: 1, 1: 1, 0: 1})
+# print(p1 + p2)
+# print(p1 - p2)
+# print(p1 * p2)
+quotient, remainder = p1 / p2
+print(quotient * p2 + remainder)
+print(p1)
 
-print(key_transposition_cipher.decrypt(ciphertext))
+# print(remainder)
+# print(p1 / p2)
+
+p3 = Polynomial({5: 1, 2: 1, 1: 1})
+p4 = Polynomial({3: 1, 2: 1, 0: 1})
+# print(p3 ^ p4)
+
+print(p1.additive_identity())
+print(p1.additive_inverse())
+print(p1 + p1.additive_inverse())

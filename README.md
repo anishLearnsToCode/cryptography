@@ -41,3 +41,4 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
     
 ## ➕ [Mathematics Of Cryptography: Algebraic Structures](notebooks/4-mathematics-cryptography-algebraic-structures.ipynb)
 1. [The Permutation Group](mathematics/permutation.py)
+1. [The Galois Field GF(2^n)](mathematics/Polynomial.py)
