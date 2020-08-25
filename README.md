@@ -40,4 +40,4 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
         1. [Columnar Transposition Cipher](ciphers/ColumnarTranspositionCipher.py)
     
 ## ➕ [Mathematics Of Cryptography: Algebraic Structures](notebooks/4-mathematics-cryptography-algebraic-structures.ipynb)
-1. 
+1. [The Permutation Group](mathematics/permutation.py)
