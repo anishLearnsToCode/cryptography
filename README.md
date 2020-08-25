@@ -10,6 +10,7 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 - [Mathematics of Cryptography](#-mathematics-of-cryptography)
 - [Traditional Symmetric-Key Ciphers](#-traditional-symmetric-key-ciphers)
 - [Mathematics of Cryptography: Algebraic Structures](#-mathematics-of-cryptography-algebraic-structures)
+- [Introduction to Modern Symmetric Key Ciphers](#-introduction-to-modern-symmetric-key-ciphers)
 
 ## 🧮 [Mathematics of Cryptography](notebooks/2-mathematics-of-cryptography.ipynb)
 1. Euclid's Algorithm
@@ -42,3 +43,5 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 ## ➕ [Mathematics Of Cryptography: Algebraic Structures](notebooks/4-mathematics-cryptography-algebraic-structures.ipynb)
 1. [The Permutation Group](mathematics/permutation.py)
 1. [The Galois Field GF(2^n)](mathematics/Polynomial.py)
+
+## 🔐 Introduction To Modern Symmetric Key Ciphers
