@@ -3,4 +3,4 @@ venv
 out
 dist
 __pycache__
-notebooks/math-of-cryptography/.ipynb_checkpoints
+notebooks/.ipynb_checkpoints
