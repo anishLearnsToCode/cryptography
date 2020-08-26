@@ -11,6 +11,7 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 - [Traditional Symmetric-Key Ciphers](#-traditional-symmetric-key-ciphers)
 - [Mathematics of Cryptography: Algebraic Structures](#-mathematics-of-cryptography-algebraic-structures)
 - [Introduction to Modern Symmetric Key Ciphers](#-introduction-to-modern-symmetric-key-ciphers)
+- [Data Encryption Standard (DES)](#-data-encryption-standard-des)
 
 ## 🧮 [Mathematics of Cryptography](notebooks/2-mathematics-of-cryptography.ipynb)
 1. Euclid's Algorithm
@@ -47,5 +48,7 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 ## 🔐 [Introduction To Modern Symmetric Key Ciphers](notebooks/5-introduction-to-modern-symmetric-key-ciphers.ipynb)
 1. [P Boxes](mathematics/PBox.py)
 1. [Feistel Mixer Cipher](ciphers/FiestelMixerCipher.py)
-1. [1 Round of a Feistel Cipher](ciphers/Round.py)
+1. [One Round of a Feistel Cipher](ciphers/Round.py)
 1. [Multiple Round Fiestel Cipher](ciphers/FiestelCipher.py)
+
+## 💳 Data Encryption Standard (DES)
