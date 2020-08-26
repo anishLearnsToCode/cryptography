@@ -1,7 +1,8 @@
 from ciphers.utils import *
 
+
 class Round:
-    def __init__(self, key: int, func, block_size=8):
+    def __init__(self, key: int, func, block_size=32):
         # key = int_to_bin(key)
         self.key = key
         self.func = func

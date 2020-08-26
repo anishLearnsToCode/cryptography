@@ -48,3 +48,4 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 1. [P Boxes](mathematics/PBox.py)
 1. [Feistel Mixer Cipher](ciphers/FiestelMixerCipher.py)
 1. [1 Round of a Feistel Cipher](ciphers/Round.py)
+1. [Multiple Round Fiestel Cipher](ciphers/FiestelCipher.py)
