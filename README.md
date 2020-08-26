@@ -3,10 +3,10 @@ __~Behrouz A. Forouzan__
 
 ![made-with-python](https://img.shields.io/badge/Made%20with-Python%203-1f425f.svg)
 
-Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. See book 📖
+Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. See book 📗
 [here](https://github.com/anishLearnsToCode/books/blob/master/cryptography/Cryptography-and-Network-Security-Forouzan.pdf).
 
-## Index
+## 📖 Index
 - [Mathematics of Cryptography](#-mathematics-of-cryptography)
 - [Traditional Symmetric-Key Ciphers](#-traditional-symmetric-key-ciphers)
 - [Mathematics of Cryptography: Algebraic Structures](#-mathematics-of-cryptography-algebraic-structures)
@@ -51,4 +51,4 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 1. [One Round of a Feistel Cipher](ciphers/Round.py)
 1. [Multiple Round Fiestel Cipher](ciphers/FiestelCipher.py)
 
-## 💳 Data Encryption Standard (DES)
+## 💳 [Data Encryption Standard (DES)](notebooks/6-data-encryption-standard-des.ipynb)
