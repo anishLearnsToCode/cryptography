@@ -49,9 +49,9 @@ class Polynomial:
     def __xor__(self, other):
         result = {}
         for degree, coefficient in self.coefficients.items():
-            result[degree] = coefficient ^ other.coefficients.get(degree, 0)
+            result[degree] = int(coefficient) ^ int(other.coefficients.get(degree, 0))
         for degree, coefficient in other.coefficients.items():
-            result[degree] = coefficient ^ self.coefficients.get(degree, 0)
+            result[degree] = int(coefficient) ^ int(self.coefficients.get(degree, 0))
         result = Polynomial(result)
         result.prune()
         return result
@@ -63,6 +63,8 @@ class Polynomial:
         return result
 
     def degree(self) -> int:
+        if len(self.coefficients) == 0:
+            return 0
         return max(degree for degree in self.coefficients)
 
     def prune(self):
@@ -76,6 +78,12 @@ class Polynomial:
     def additive_inverse(self):
         return -self
 
+    def to_binary(self, block_size) -> str:
+        result = [0] * block_size
+        for degree, coefficient in self.coefficients.items():
+            result[degree] = coefficient
+        return ''.join(map(str, result[::-1]))
+
     @staticmethod
     def update_coefficients(polynomial, coefficients, factor=1):
         for degree, coefficient in polynomial.coefficients.items():
@@ -84,3 +92,12 @@ class Polynomial:
     @staticmethod
     def additive_identity():
         return Polynomial({})
+
+    @staticmethod
+    def fromBinary(binary: str):
+        result = {}
+        for index, value in enumerate(binary):
+            degree = len(binary) - index - 1
+            if value == '1':
+                result[degree] = 1
+        return Polynomial(result)
