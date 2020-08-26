@@ -44,4 +44,5 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 1. [The Permutation Group](mathematics/permutation.py)
 1. [The Galois Field GF(2^n)](mathematics/Polynomial.py)
 
-## 🔐 Introduction To Modern Symmetric Key Ciphers
+## 🔐 [Introduction To Modern Symmetric Key Ciphers](notebooks/5-introduction-to-modern-symmetric-key-ciphers.ipynb)
+1. [P Boxes](mathematics/PBox.py)
