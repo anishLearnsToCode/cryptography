@@ -11,3 +11,4 @@ from ciphers.RailFenceCipher import RailFenceCipher
 from ciphers.RowTranspositionCipher import RowTranspositionCipher
 from ciphers.KeyedTranspositionCipher import KeyedTranspositionCipher
 from ciphers.ColumnarTranspositionCipher import ColumnarTranspositionCipher
+from ciphers.FiestelMixerCipher import FiestelMixerCipher
