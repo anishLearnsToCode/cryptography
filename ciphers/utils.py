@@ -5,3 +5,6 @@ def int_to_bin(number: int, block_size=8) -> str:
 
 def char_2_num(letter: str) -> int:
     return ord(letter) - ord('a')
+
+def mod(a, b):
+    return a % b

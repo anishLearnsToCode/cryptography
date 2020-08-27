@@ -1,0 +1,2 @@
+class DES:
+    pass
