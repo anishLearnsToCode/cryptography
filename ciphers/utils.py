@@ -7,6 +7,10 @@ def char_2_num(letter: str) -> int:
     return ord(letter) - ord('a')
 
 
+def num_2_char(number: int) -> str:
+    return chr(ord('a') + number)
+
+
 def mod(a, b):
     return a % b
 

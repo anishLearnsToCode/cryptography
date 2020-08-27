@@ -52,3 +52,9 @@ Algorithms from the book Cryptography & Network Security ~Behrouz A. Forouzan. S
 1. [Multiple Round Fiestel Cipher](ciphers/FiestelCipher.py)
 
 ## 💳 [Data Encryption Standard (DES)](notebooks/6-data-encryption-standard-des.ipynb)
+1. [Permutation Box](mathematics/PBox.py)
+1. [Substitution Box](mathematics/SBox.py)
+1. [Swapper](des/Swapper.py)
+1. [Mixer](des/Mixer.py)
+1. [Single Fiestel Round](des/Round.py)
+1. [DES - Data Encryption Standad Algorithm](des/DES.py)

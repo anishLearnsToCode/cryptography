@@ -21,6 +21,18 @@ class DES:
             binary = round.decrypt(binary)
         return binary
 
+    def encrypt_message(self, plaintext: str) -> list:
+        result = [0] * len(plaintext)
+        for index, letter in enumerate(plaintext.lower()):
+            result[index] = int(self.encrypt(int_to_bin(ord(letter), block_size=64)), base=2)
+        return result
+
+    def decrypt_message(self, ciphertext_stream: list) -> str:
+        return ''.join(map(chr, self.plaintext_stream(ciphertext_stream)))
+
+    def plaintext_stream(self, ciphertext_stream: list) -> list:
+        return [int(self.decrypt(int_to_bin(number, block_size=64)), base=2) for number in ciphertext_stream]
+
     def generate_rounds(self) -> list:
         rounds = []
         self.key = self.PC_1.permutate(self.key)
