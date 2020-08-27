@@ -35,4 +35,14 @@ class Mixer:
         l = int_to_bin(int(l, base=2) ^ int(r3, base=2), block_size=self.block_size // 2)
         return l + r
 
-    # def decrypt(self, binary:str):
+    def decrypt(self, binary:str) -> str:
+        return self.encrypt(binary)
+
+    @staticmethod
+    def des_mixer(key: int):
+        return Mixer(
+          key=key,
+          initial_permutation=PBox.des_single_round_expansion(),
+          final_permutation=PBox.des_single_round_final(),
+          func=lambda a, b: a % b
+        )
