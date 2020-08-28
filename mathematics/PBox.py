@@ -24,7 +24,7 @@ class PBox:
         if self.is_invertible():
             result = {}
             for index, mapping in self.key.items():
-                result[mapping] = index
+                result[mapping[0]] = index
             return PBox(result)
 
     @staticmethod

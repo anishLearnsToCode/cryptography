@@ -7,7 +7,7 @@ class PlayFairCipher:
         index_map = {}
         for row in range(len(self.key)):
             for column in range(len(self.key[row])):
-                letter = self.key[row][column]
+                letter = self.key[row][column].lower()
                 if letter == 'i':
                     index_map['j'] = (row, column)
                 index_map[letter] = (row, column)
@@ -49,13 +49,17 @@ class PlayFairCipher:
 
     @staticmethod
     def pad_extra(plaintext):
-        return plaintext + chr((ord(plaintext[len(plaintext) - 1]) - ord('a') + 1) % 26 +ord('a')) \
+        return plaintext + PlayFairCipher.middle_character(plaintext[len(plaintext) - 1]) \
             if len(plaintext) % 2 == 1 else plaintext
 
     @staticmethod
     def remove_consecutive_same_chars(plaintext):
         for index in range(len(plaintext) - 1):
             if plaintext[index] == plaintext[index + 1]:
-                plaintext = plaintext[: index + 1] + chr((ord(plaintext[index]) - ord('a') + 1) % 26 + ord('a')) \
-                            + plaintext[index + 1:]
+                plaintext = plaintext[: index + 1] + PlayFairCipher.middle_character(plaintext[index]) + plaintext[index + 1:]
         return plaintext
+
+    @staticmethod
+    def middle_character(letter):
+        # return chr((ord(letter) - ord('a') + 1) % 26 + ord('a'))
+        return 'x'

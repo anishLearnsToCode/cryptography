@@ -8,18 +8,22 @@ class DES:
         self.key = int_to_bin(key, block_size=64)
         self.PC_1 = PBox.des_key_initial_permutation()
         self.PC_2 = PBox.des_shifted_key_permutation()
+        self.P_i = PBox.des_initial_permutation()
+        self.P_f = PBox.des_final_permutation()
         self.single_shift = {1, 2, 9, 16}
         self.rounds = self.generate_rounds()
 
     def encrypt(self, binary: str) -> str:
+        binary = self.P_i.permutate(binary)
         for round in self.rounds:
             binary = round.encrypt(binary)
-        return binary
+        return self.P_f.permutate(binary)
 
     def decrypt(self, binary: str) -> str:
+        binary = self.P_f.invert().permutate(binary)
         for round in self.rounds[::-1]:
             binary = round.decrypt(binary)
-        return binary
+        return self.P_i.invert().permutate(binary)
 
     def encrypt_message(self, plaintext: str) -> list:
         result = [0] * len(plaintext)
