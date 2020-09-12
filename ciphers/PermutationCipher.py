@@ -7,14 +7,12 @@ class PermutationCipher:
         self.pbox = PBox.from_list(key)
         self.inverse = self.pbox.invert()
         self.columns = len(key)
+        self.key = np.array(key)
 
     def encrypt(self, plaintext: str) -> str:
         P = self.str_2_mat(plaintext)
         print(P)
-        ciphertext = ''
-        for index, row in enumerate(P):
-            ciphertext += self.pbox.permutate(''.join(row)).upper()
-        return ciphertext
+        return self.mat_2_str(P[:, self.key - 1].T).upper()
 
     def decrypt(self, ciphertext: str) -> str:
         C = self.str_2_mat(ciphertext)
@@ -27,3 +25,7 @@ class PermutationCipher:
         message = message + 'z' * (-len(message) % self.columns)
         rows = len(message) // self.columns
         return np.reshape(list(message), (rows, self.columns))
+
+    def mat_2_str(self, matrix) -> str:
+        rows, columns = matrix.shape
+        return ''.join(matrix.flatten())
