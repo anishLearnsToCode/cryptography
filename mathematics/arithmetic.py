@@ -84,7 +84,6 @@ def modInv(a, p):  # Finds the inverse of a mod p, if it exists
     raise ValueError(str(a) + " has no inverse mod " + str(p))
 
 
-
 def minor(A, i, j):  # Return matrix A with the ith row and jth column deleted
     A = np.array(A)
     sub_matrix = np.zeros(shape=(len(A) - 1, len(A) - 1))
@@ -100,3 +99,81 @@ def minor(A, i, j):  # Return matrix A with the ith row and jth column deleted
             q = q + 1
         p = p + 1
     return sub_matrix
+
+
+def is_prime(number: int) -> bool:
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+    return True
+
+
+def product(numbers: list) -> int:
+    result = 1
+    for number in numbers:
+        result *= number
+    return result
+
+
+def relatively_prime(a: int, b: int) -> bool:
+    return gcd(a, b) == 1
+
+
+def exp_func(x, y):
+    exp = bin(y)
+    value = x
+
+    for i in range(3, len(exp)):
+        value = value * value
+        if exp[i:i + 1] == '1':
+            value = value * x
+    return value
+
+
+def mod_exponentiation(X, E, m):
+    Y = 1
+    while E > 0:
+        if E % 2 == 0:
+            X = (X * X) % m
+            E /= 2
+        else:
+            Y = (X * Y) % m
+            E -= 1
+    return Y
+
+
+def totient(number: int) -> int:
+    count = 0
+    for i in range(1, number):
+        if gcd(number, i) == 1:
+            count += 1
+    return count
+
+
+def crt_representation(number: int, crt: tuple) -> list:
+    result = []
+    for mod in crt:
+        result.append(number % mod)
+    return result
+
+
+def are_pairwise_relatively_prime(numbers) -> bool:
+    for i, number in enumerate(numbers):
+        for j in range(i + 1, len(numbers)):
+            if not relatively_prime(number, numbers[j]):
+                return False
+    return True
+
+
+# noinspection PyTypeChecker
+def valid_crc(crc: tuple, number: int) -> bool:
+    return are_pairwise_relatively_prime(crc) and product(crc) == number
+
+
+def is_product_of_2_primes(number: int) -> bool:
+    for i in range(2, number):
+        if number % i == 0:
+            quotient = number // i
+            if is_prime(i) and is_prime(quotient):
+                return True
+    return False

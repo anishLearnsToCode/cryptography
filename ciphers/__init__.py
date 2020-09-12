@@ -14,3 +14,4 @@ from ciphers.ColumnarTranspositionCipher import ColumnarTranspositionCipher
 from ciphers.FiestelMixerCipher import FiestelMixerCipher
 from ciphers.Round import Round
 from ciphers.FiestelCipher import FiestelCipher
+from ciphers.PermutationCipher import PermutationCipher
