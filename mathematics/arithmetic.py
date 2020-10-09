@@ -150,6 +150,14 @@ def totient(number: int) -> int:
     return count
 
 
+def relatively_prime_numbers(n):
+    numbers = []
+    for i in range(1, n):
+        if relatively_prime(i, n):
+            numbers.append(i)
+    return numbers
+
+
 def crt_representation(number: int, crt: tuple) -> list:
     result = []
     for mod in crt:
@@ -177,3 +185,19 @@ def is_product_of_2_primes(number: int) -> bool:
             if is_prime(i) and is_prime(quotient):
                 return True
     return False
+
+
+def discrete_log_table(number: int) -> list:
+    table = []
+    for i in range(1, number):
+        row = []
+        for j in range(1, number):
+            row.append(pow(i, j, number))
+        table.append(row)
+    return table
+
+
+def discrete_log(n, b, m):
+    for i in range(m):
+        if pow(b, i, m) == n:
+            return i
